@@ -38,7 +38,7 @@ fn generate_nonce() -> String {
 
 fn auth() {
     let url = "https://api.twitter.com/oauth/request_token";
-    let consumer_key = "eW51UBkqXCHyJMnW1SpAoAPJR";
+    let consumer_key = "";
     let nonce = generate_nonce();
     let timestamp = time::get_time().sec.to_string();
     let mut collected_params = collect_params(consumer_key, &nonce, &timestamp);
@@ -96,8 +96,8 @@ fn main() {
 
     let url = "https://api.twitter.com/oauth2/token";
     //let url = "http://requestb.in/1fbwty61";
-    let consumer_key_and_secret = "eW51UBkqXCHyJMnW1SpAoAPJR:n9gnOE1wrcxDH3zrEDkSG31u4Iye7yIEWGU1djzdAc03NBhXjt";
-    //let consumer_secret = "n9gnOE1wrcxDH3zrEDkSG31u4Iye7yIEWGU1djzdAc03NBhXjt";
+    let consumer_key_and_secret = ":";
+    //let consumer_secret = "";
 
     let base64_config = STANDARD;
     let mut encoded_secret = consumer_key_and_secret.as_bytes().to_base64(base64_config);
@@ -141,7 +141,7 @@ fn main() {
     //
     // println!("Response: {}", body);
 
-    let access_token = "AAAAAAAAAAAAAAAAAAAAAK1UjwAAAAAAJDp1l4LfFSVSXtenN6NXQHGrxdU%3DlrpmEhaJVg1HHskIuk4LIT985ASne3sNwM7KxUP7LC8oE7q2Um";
+    let access_token = "";
 
     'outer: loop {
         let mut line = String::new();
